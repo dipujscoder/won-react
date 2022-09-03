@@ -19,21 +19,12 @@ const App = () => {
 
     // console.log(a);
 
-    const _handleOnClick = (e) => {
-        e.target.style.color = 'red'
-    }
-    const _handleOnChange = (e) => {
-        // e.target.style.color = 'red'
-        console.log(e.target);
-        console.log("e", e.target.value);
-    }
-
 
     return React.createElement(
         'div',
         { className: "text-primary", id: "main-container" },
         "Hello world",
-        React.createElement('p', { className: "text-primary", id: "one", onClick: _handleOnClick }, "This is primary color"),
+        React.createElement('p', { className: "text-primary", id: "one", }, "This is primary color"),
         React.createElement(
             'p',
             {
@@ -75,12 +66,6 @@ const App = () => {
                     src: "../public/img/1.jpg",
                     style: { width: "100%" },
                     alt: "this is hello",
-                }),
-            React.createElement('input',
-                {
-                    className: "img-fluild",
-                    onChange: _handleOnChange,
-                    name: "dipu"
                 }),
 
         ),
