@@ -22,6 +22,9 @@ const App = () => {
     const _handleOnClick = (e) => {
         e.target.style.color = 'red'
     }
+    const _handleOnClick2 = (e) => {
+        e.target.style.color = 'green'
+    }
     const _handleOnChange = (e) => {
         // e.target.style.color = 'red'
         console.log(e.target);
@@ -44,7 +47,7 @@ const App = () => {
         ),
         React.createElement('ul', { className: "text-success" },
             arr.map(e => {
-                return React.createElement('li', { className: "list-item", }, e.text)
+                return React.createElement('li', { className: "list-item", onClick: _handleOnClick2 }, e.text)
             })
         ),
         React.createElement('div', { className: "row", },
